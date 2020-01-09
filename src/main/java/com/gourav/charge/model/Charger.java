@@ -10,10 +10,17 @@ public class Charger {
 
   @Id
   private Integer      id;
-  private String powerType;
   private List<Connector> connectors;
   private String status;
+  private PricingDetails pricingDetails;
 
+  public PricingDetails getPricingDetails() {
+    return pricingDetails;
+  }
+
+  public void setPricingDetails(final PricingDetails pricingDetails) {
+    this.pricingDetails = pricingDetails;
+  }
 
   public Integer getId() {
     return id;
@@ -21,14 +28,6 @@ public class Charger {
 
   public void setId(final Integer id) {
     this.id = id;
-  }
-
-  public String getPowerType() {
-    return powerType;
-  }
-
-  public void setPowerType(final String powerType) {
-    this.powerType = powerType;
   }
 
   public List<Connector> getConnectors() {

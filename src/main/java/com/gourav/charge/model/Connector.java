@@ -11,6 +11,15 @@ public class Connector {
   private String powerOutput;
   private String connectorType;
   private String status;
+  private String powerType;
+
+  public String getPowerType() {
+    return powerType;
+  }
+
+  public void setPowerType(final String powerType) {
+    this.powerType = powerType;
+  }
 
   public Integer getId() {
     return id;

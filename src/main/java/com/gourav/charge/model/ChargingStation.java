@@ -7,14 +7,14 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class ChargingStation {
 
   @Id
-  private Integer stationCode;
-  private String  name;
-  private String  longitude;
-  private String  Latitude;
-  private Address address;
-  private Amenities amenities;
-  private String status;
-  private Charger charger;
+  private Integer     stationCode;
+  private String      name;
+  private String      longitude;
+  private String      latitude;
+  private Address     address;
+  private Amenities   amenities;
+  private String      status;
+  private Charger     charger;
   private Information information;
 
 
@@ -43,11 +43,11 @@ public class ChargingStation {
   }
 
   public String getLatitude() {
-    return Latitude;
+    return latitude;
   }
 
   public void setLatitude(final String latitude) {
-    Latitude = latitude;
+    this.latitude = latitude;
   }
 
   public Address getAddress() {
