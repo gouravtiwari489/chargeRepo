@@ -7,7 +7,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class ChargingStation {
 
   @Id
-  private Integer     stationCode;
+  private String     stationCode;
   private String      name;
   private String      longitude;
   private String      latitude;
@@ -15,14 +15,31 @@ public class ChargingStation {
   private Amenities   amenities;
   private String      status;
   private Charger     charger;
+  private String accessibility;
   private Information information;
+  private String paymentMethod;
 
+  public String getPaymentMethod() {
+    return paymentMethod;
+  }
 
-  public Integer getStationCode() {
+  public void setPaymentMethod(final String paymentMethod) {
+    this.paymentMethod = paymentMethod;
+  }
+
+  public String getAccessibility() {
+    return accessibility;
+  }
+
+  public void setAccessibility(final String accessibility) {
+    this.accessibility = accessibility;
+  }
+
+  public String getStationCode() {
     return stationCode;
   }
 
-  public void setStationCode(final Integer stationCode) {
+  public void setStationCode(final String stationCode) {
     this.stationCode = stationCode;
   }
 

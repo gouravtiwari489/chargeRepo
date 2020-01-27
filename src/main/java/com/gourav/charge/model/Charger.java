@@ -9,25 +9,16 @@ import java.util.List;
 public class Charger {
 
   @Id
-  private Integer      id;
+  private String      code;
   private List<Connector> connectors;
   private String status;
-  private PricingDetails pricingDetails;
 
-  public PricingDetails getPricingDetails() {
-    return pricingDetails;
+  public String getCode() {
+    return code;
   }
 
-  public void setPricingDetails(final PricingDetails pricingDetails) {
-    this.pricingDetails = pricingDetails;
-  }
-
-  public Integer getId() {
-    return id;
-  }
-
-  public void setId(final Integer id) {
-    this.id = id;
+  public void setCode(final String code) {
+    this.code = code;
   }
 
   public List<Connector> getConnectors() {

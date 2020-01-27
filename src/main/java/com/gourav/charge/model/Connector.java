@@ -7,11 +7,20 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Connector {
 
   @Id
-  private Integer id;
+  private String code;
   private String powerOutput;
   private String connectorType;
   private String status;
   private String powerType;
+  private String price;
+
+  public String getPrice() {
+    return price;
+  }
+
+  public void setPrice(final String price) {
+    this.price = price;
+  }
 
   public String getPowerType() {
     return powerType;
@@ -21,12 +30,12 @@ public class Connector {
     this.powerType = powerType;
   }
 
-  public Integer getId() {
-    return id;
+  public String getCode() {
+    return code;
   }
 
-  public void setId(final Integer id) {
-    this.id = id;
+  public void setCode(final String code) {
+    this.code = code;
   }
 
   public String getPowerOutput() {
