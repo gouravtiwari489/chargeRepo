@@ -3,21 +3,24 @@ package com.gourav.charge.model;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.util.List;
+
 @Document
 public class ChargingStation {
 
   @Id
-  private String     stationCode;
-  private String      name;
-  private String      longitude;
-  private String      latitude;
-  private Address     address;
-  private Amenities   amenities;
-  private String      status;
-  private Charger     charger;
-  private String accessibility;
-  private Information information;
-  private String paymentMethod;
+  private String        _id;
+  private String        name;
+  private String        longitude;
+  private String        latitude;
+  private Address       address;
+  private Amenities     amenities;
+  private String        status;
+  //private Charger     charger;
+  private List<Charger> chargers;
+  private String        accessibility;
+  private Information   information;
+  private String        paymentMethod;
 
   public String getPaymentMethod() {
     return paymentMethod;
@@ -25,6 +28,14 @@ public class ChargingStation {
 
   public void setPaymentMethod(final String paymentMethod) {
     this.paymentMethod = paymentMethod;
+  }
+
+  public List<Charger> getChargers() {
+    return chargers;
+  }
+
+  public void setChargers(final List<Charger> chargers) {
+    this.chargers = chargers;
   }
 
   public String getAccessibility() {
@@ -35,12 +46,12 @@ public class ChargingStation {
     this.accessibility = accessibility;
   }
 
-  public String getStationCode() {
-    return stationCode;
+  public String get_id() {
+    return _id;
   }
 
-  public void setStationCode(final String stationCode) {
-    this.stationCode = stationCode;
+  public void set_id(final String _id) {
+    this._id = _id;
   }
 
   public String getName() {
@@ -91,14 +102,6 @@ public class ChargingStation {
     this.status = status;
   }
 
-  public Charger getCharger() {
-    return charger;
-  }
-
-  public void setCharger(final Charger charger) {
-    this.charger = charger;
-  }
-
   public Information getInformation() {
     return information;
   }
@@ -106,4 +109,5 @@ public class ChargingStation {
   public void setInformation(final Information information) {
     this.information = information;
   }
+
 }

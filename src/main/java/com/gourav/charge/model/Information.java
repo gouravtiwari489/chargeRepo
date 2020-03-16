@@ -7,12 +7,12 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Information {
 
   @Id
-  private Integer id;
+  private Integer _id;
 
-  public Integer getId() {
-    return id;
+  public Integer get_id() {
+    return _id;
   }
-  public void setId(final Integer id) {
-    this.id = id;
+  public void set_id(final Integer _id) {
+    this._id = _id;
   }
 }

@@ -7,15 +7,15 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Address {
 
   @Id
-  private Integer id;
-  private String landMark;
+  private Integer _id;
+  private String  landMark;
 
-  public Integer getId() {
-    return id;
+  public Integer get_id() {
+    return _id;
   }
 
-  public void setId(final Integer id) {
-    this.id = id;
+  public void set_id(final Integer _id) {
+    this._id = _id;
   }
 
   public String getLandMark() {

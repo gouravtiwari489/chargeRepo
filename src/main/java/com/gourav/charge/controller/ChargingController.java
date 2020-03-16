@@ -37,6 +37,20 @@ public class ChargingController {
 
   }
 
+  @PostMapping("/chargers")
+  public ResponseEntity<?> addAllChargers(@Valid @RequestBody List<ChargingStation> chargingStations) {
+    log.info("charger request {}", chargingStations);
+    try {
+      List<ChargingStation> chargingStationsRes = chargingStationRepository.saveAll(chargingStations);
+      log.info("ChargingStation response {}", chargingStationsRes);
+      return new ResponseEntity<>(chargingStationsRes, HttpStatus.CREATED);
+    } catch (Exception e) {
+      log.error("Failed to save ChargingStation details {}", e.getMessage());
+      return new ResponseEntity<>("Error saving ChargingStation details ", HttpStatus.INTERNAL_SERVER_ERROR);
+    }
+
+  }
+
   @GetMapping()
   public ResponseEntity<?> fetchCharger(){
     //log.info("Id {}", id);

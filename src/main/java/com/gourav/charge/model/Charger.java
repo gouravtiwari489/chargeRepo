@@ -9,16 +9,16 @@ import java.util.List;
 public class Charger {
 
   @Id
-  private String      code;
+  private String          _id;
   private List<Connector> connectors;
-  private String status;
+  private String          status;
 
-  public String getCode() {
-    return code;
+  public String get_id() {
+    return _id;
   }
 
-  public void setCode(final String code) {
-    this.code = code;
+  public void set_id(final String _id) {
+    this._id = _id;
   }
 
   public List<Connector> getConnectors() {

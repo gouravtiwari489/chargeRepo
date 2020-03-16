@@ -7,7 +7,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Connector {
 
   @Id
-  private String code;
+  private String _id;
   private String powerOutput;
   private String connectorType;
   private String status;
@@ -30,12 +30,12 @@ public class Connector {
     this.powerType = powerType;
   }
 
-  public String getCode() {
-    return code;
+  public String get_id() {
+    return _id;
   }
 
-  public void setCode(final String code) {
-    this.code = code;
+  public void set_id(final String _id) {
+    this._id = _id;
   }
 
   public String getPowerOutput() {
