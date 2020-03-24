@@ -56,7 +56,7 @@ public class ChargingController {
     //log.info("Id {}", id);
     try{
       List<ChargingStation> chargingStationList = chargingStationRepository.findAll();
-      log.info("charger response for requested id {}", chargingStationList);
+      log.info("charger response for requested Id {}", chargingStationList);
       return new ResponseEntity<>(chargingStationList, HttpStatus.OK);
     }catch (Exception e){
       log.error("Error while fetching charger details {}", e.getMessage());
